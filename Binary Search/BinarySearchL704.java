@@ -19,6 +19,4 @@ public class Solution {
         return -1; //unsuccessful element
         
     }
-}class BinarySearchL704 {
-    
 }
