@@ -28,6 +28,4 @@ public class Main {
         return dp[n];
     }
 
-}public class climbStairsTabulation {
-    
 }
