@@ -25,9 +25,9 @@ public class Main {
             int max = 0;
             for (int i = 0; i < n; i++) {
                 if (wts[i] <= bagc) {
-                    int rbagc = bagc - wts[i];
-                    int rbagv = dp[rbagc];
-                    int tbagv = rbagv + val[i];
+                    int rbagc = bagc - wts[i]; //remaining bag capacity
+                    int rbagv = dp[rbagc]; // remaining bag value
+                    int tbagv = rbagv + val[i]; // total bag value
                     if (tbagv > max) {
                         max = tbagv;
                     }
