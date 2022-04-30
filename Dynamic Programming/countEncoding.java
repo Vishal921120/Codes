@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class Main {
+public class countEncoding {
 
     public static void main(String[] args) throws Exception {
         Scanner scn = new Scanner(System.in);
@@ -24,7 +24,7 @@ public class Main {
                 // second last no. should be less than 3, so only 1 and 2 allowed
                 // no. likes 5220 , 2310
                 if(str.charAt(i-1)=='1' || str.charAt(i-1)=='2'){
-                    dp[i] = dp[i-1] + (i>=2 ? dp[i-2] : 1);
+                    dp[i] = (i>=2 ? dp[i-2] : 1);
                 }
                 //no.likes 530,290
                 else{
