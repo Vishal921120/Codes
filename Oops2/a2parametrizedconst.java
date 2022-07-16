@@ -1,14 +1,4 @@
-//Why we need class 
-// let say we want to store the details of a student Vishal
-// Details can be : Name , class , roll no , section , father name 
-// Now for every new student we have to create another new variables to store the information 
-// So its a very bad method to store the details of every student again and again creating
-// lot of varibales and data types . So to make it genric means for further uses we will make
-// class of a student and use that class for every student by making objects.
-
-// below example is to store the information about phones.
-
-public class a1 {
+public class a2parametrizedconst {
     public static class Phone{
         String companyName;
         String model ;
@@ -16,6 +6,22 @@ public class a1 {
         int ram;
         int storage ;
         int batteryPower;
+
+        Phone(){ 
+
+            // When we define our own constructor then we lost our default constructor.
+            // Created this for p1 and p2 otherwise the code will not run;
+
+        }
+
+        Phone(String companyName,String model,String color, int ram,int storage, int batteryPower){
+            this.companyName = companyName;
+            this.model = model;
+            this.color = color;
+            this.ram = ram ;
+            this.storage = storage;
+            this.batteryPower = batteryPower;
+        }
 
         public void getInfo(){
             StringBuilder sb = new StringBuilder();
@@ -31,7 +37,7 @@ public class a1 {
     }
 
     public static void test1(){
-        Phone p1 = new Phone();
+        Phone p1 = new Phone(); 
         p1.companyName = "oppo";
         p1.model = "5g e";
         p1.color = "black";
@@ -47,12 +53,15 @@ public class a1 {
         p2.storage = 64;
         p2.batteryPower = 4500;
 
+        // Above lines can be written in the single line by using our parametrized constructor
+        Phone p3 =  new Phone("vivo","ff", "vilot", 10, 556, 5500);
+
         p1.getInfo();
         System.out.println("-------------------------------------------");
         p2.getInfo();
+        System.out.println("-------------------------------------------");
+        p3.getInfo();
     }
-    // If we see in the above code again we are writing lot of lines to give the details of phones
-    // So how to avoid this ?? Ans : Paramertized constructor
 
     public static void main(String[] args){
         test1();
